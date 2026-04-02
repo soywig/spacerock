@@ -12,6 +12,13 @@ set -ouex pipefail
 # this installs a package from fedora repos
 dnf5 install -y tmux gnome-shell-extension-dash-to-dock
 
+# enable dash to dock
+cat > /usr/share/glib-2.0/schemas/99-moonrock.gschema.override << 'EOF'
+[org.gnome.shell]
+enabled-extensions=['dash-to-dock@micxgx.gmail.com']
+EOF
+glib-compile-schemas /usr/share/glib-2.0/schemas/
+
 # Use a COPR Example:
 #
 # dnf5 -y copr enable ublue-os/staging
