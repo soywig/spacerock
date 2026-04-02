@@ -19,7 +19,7 @@ enabled-extensions=['dash-to-dock@micxgx.gmail.com', 'logomenu@aryan_k', 'appind
 EOF
 glib-compile-schemas /usr/share/glib-2.0/schemas/
 
-# block unwanted flatpaks from being installed on first boot
+# block unwanted flatpaks from being installed on first boot 
 cat >> /usr/share/ublue-os/flatpak-blocklist << 'EOF'
 deny com.github.Matoking.protontricks/*
 deny com.github.tchx84.Flatseal/*
