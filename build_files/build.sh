@@ -12,7 +12,7 @@ set -ouex pipefail
 # this installs a package from fedora repos
 dnf5 install -y tmux gnome-shell-extension-dash-to-dock 
 
-dnf5 remove -y waydroid firewall-config btrfs-assistant input-remapper rom-properties
+dnf5 remove -y waydroid firewall-config btrfs-assistant input-remapper rom-properties webapp-manager
 
 # enable dash to dock
 cat > /usr/share/glib-2.0/schemas/zz0-99-moonrock.gschema.override << 'EOF'
