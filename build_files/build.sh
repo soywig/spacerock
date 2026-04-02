@@ -21,8 +21,14 @@ enabled-extensions=['dash-to-dock@micxgx.gmail.com', 'logomenu@aryan_k', 'appind
 EOF
 glib-compile-schemas /usr/share/glib-2.0/schemas/
 
-# flatpaks
-flatpak list --columns=application
+# remove flatpaks
+cat >> /usr/share/ublue-os/flatpak-blocklist << 'EOF'
+deny com.ranfdev.DistroShelf/*
+deny com.github.Matoking.protontricks/*
+deny com.vysp3r.ProtonPlus/*
+deny com.github.tchx84.Flatseal/*
+deny io.github.flattool.Warehouse/*
+EOF
 
 # Use a COPR Example:
 #
