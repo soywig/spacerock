@@ -13,9 +13,9 @@ set -ouex pipefail
 dnf5 install -y tmux gnome-shell-extension-dash-to-dock
 
 # enable dash to dock
-cat > /usr/share/glib-2.0/schemas/99-moonrock.gschema.override << 'EOF'
+cat > /usr/share/glib-2.0/schemas/zz0-99-moonrock.gschema.override << 'EOF'
 [org.gnome.shell]
-enabled-extensions=['dash-to-dock@micxgx.gmail.com']
+enabled-extensions=['dash-to-dock@micxgx.gmail.com', 'logomenu@aryan_k', 'appindicatorsupport@rgcjonas.gmail.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'gsconnect@andyholmes.github.io', 'blur-my-shell@aunetx', 'hotedge@jonathan.jdoda.ca', 'caffeine@patapon.info', 'add-to-steam@pupper.space', 'restartto@tiagoporsch.github.io', 'compiz-alike-magic-lamp-effect@hermes83.github.com', 'bazaar-integration@kolunmi.github.io']
 EOF
 glib-compile-schemas /usr/share/glib-2.0/schemas/
 
