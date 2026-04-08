@@ -25,7 +25,7 @@ FROM ghcr.io/ublue-os/bazzite-gnome:stable
 
 # RUN rm /opt && mkdir /opt
 
-RUN dnf config-manager setopt terra-mesa.enabled=0
+RUN rm /etc/yum.repos.d/terra-mesa.repo
 
 ### MODIFICATIONS
 ## make modifications desired in your image and install packages by modifying the build.sh script
@@ -40,5 +40,3 @@ RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
 ### LINTING
 ## Verify final image and contents are correct.
 RUN bootc container lint
-
-RUN ls /etc/yum.repos.d/
